@@ -25,6 +25,9 @@ public class Graph {
             adjacentMartix[couple[0]][couple[1]] = 1;
             adjacentMartix[couple[1]][couple[0]] = 1;
         });
+        for(int i = 0; i < verticesCount; i++) {
+            adjacentMartix[i][i] = 1;
+        }
     }
 
     public static Graph[] parseFile(String filepath) throws FileNotFoundException {
@@ -61,7 +64,66 @@ public class Graph {
         return Integer.parseInt(line.split(" : ")[1]);
     }
 
+    public boolean Ore() {
+        for(int i = 0; i < verticesCount; i++) {
+            for(int j = 0; j < verticesCount; j++) {
+                if(adjacentMartix[i][j] == 0) {
+                    if(degrees(i)+degrees(j) < verticesCount) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    public boolean Posa() {
+        int[] allDegrees = new int[verticesCount];
+        for (int i = 0; i < verticesCount; i++) {
+            allDegrees[i] = degrees(i);
+        }
+        int max = (verticesCount - 1) / 2;
+
+        for(int k = 1; k <= max; k++) {
+            int count = 0;
+            for(int degrees : allDegrees) {
+                if(degrees < k) {
+                    count++;
+                }
+            }
+            if(count >= k) {
+                return false;
+            }
+        }
+
+        float maxF = ((float)verticesCount - 1) / 2;
+        int count = 0;
+        for(int degrees : allDegrees) {
+            if(degrees < maxF) {
+                count++;
+            }
+        }
+        if(count > maxF) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public int degrees(int index) {
+        int result = -1;
+        for (int element : adjacentMartix[index]) {
+            if(element == 1) {
+                result++;
+            }
+        }
+        return result;
+    }
+
     public boolean isHamiltonian() {
+        if(Ore() || Posa()) {
+            return true;
+        }
         int[] path = new int[verticesCount];
         int[] included = new int[verticesCount];
         for (int i = 0; i < verticesCount; i++) {

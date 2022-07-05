@@ -1,0 +1,13 @@
+Graphe semi-hamiltonien
+    Un graphe semi-hamiltonien est un graphe qui contient une chaîne hamiltonienne, mais pas de
+    cycle hamiltonien.
+
+Graphe hamiltonien-connexe
+    Un graphe est dit hamiltonien-connexe lorsque, pour toute paire de sommets du graphe, il
+    existe une chaîne hamiltonienne entre ces sommets.
+
+Un tournoi a un nombre impair de chemins hamiltoniens. Un tournoi à plus de deux arêtes est hamiltonien
+si (et seulement si) il est fortement connexe.
+
+ C'est Gabriel Andrew Dirac qui ouvre le bal en 1952, avec
+ l'idée intuitive qu'un graphe est forcément hamiltonien lorsqu'il possède « suffisamment d'arêtes »

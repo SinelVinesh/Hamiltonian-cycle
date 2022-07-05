@@ -1,0 +1,10 @@
+- Deroulement generation (txt)
+- Donnees.csv
+
+Objectif : 
+Verifier si le graphe possede un cycle hamiltonien
+
+Generer graphe :
+1 - tirer le nombre de sommets [50 - 150]
+2 - tirer le nombre d'aretes 0 - comb(2,n)
+3 - tirer l'emplacement des aretes 

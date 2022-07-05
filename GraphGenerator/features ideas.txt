@@ -1,0 +1,4 @@
+Moyenne
+Ecart type des degres
+min degres
+convexe

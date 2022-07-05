@@ -1,0 +1,8 @@
+✔ Generation des donnees (java) : @done(22-06-29 09:16)
+    ✔ Nombre aleatoire de sommets : [50 - 150] @done(22-06-29 09:16)
+    ✔ Nombre aleatoire d'aretes : [0 - comb(m,2)] @done(22-06-29 09:16)
+    ✔ Positionnement aleatoire des aretes @done(22-06-29 09:16)
+    ✔ Line break @done(22-06-29 09:16)
+    ✔ Stockage dans un fichier @done(22-06-29 09:16)
+✔ Parser @done(22-06-29 09:16)
+☐ Classification de graphe

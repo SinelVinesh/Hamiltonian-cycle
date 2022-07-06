@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            Graph[] graphs = Graph.parseFile("trace.txt");
+            Graph[] graphs = Graph.parseFile("test.txt");
             for(Graph g : graphs) {
                 System.out.println(g.isHamiltonian());
             }
